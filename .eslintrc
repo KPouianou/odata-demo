@@ -1,12 +1,9 @@
 {
-  "extends": "airbnb",
-  plugins: ["react", "jsx-a11y", "import"],
+  "extends": "airbnb-base",
+  plugins: ["import"],
   "parserOptions": {
     "ecmaVersion": 2017,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "sourceType": "module"
   },
   "env": {
     "browser": true
@@ -23,20 +20,10 @@
     "no-nested-ternary": 0,
     "no-param-reassign": 0,
     "no-plusplus": 0,
-    "react/prefer-stateless-function": 0,
-    "jsx-a11y/label-has-for": 0,
-    "jsx-a11y/no-static-element-interactions": 0,
-    "jsx-a11y/anchor-is-valid": [ "error", {
-      "components": [ "Link" ],
-      "specialLink": [ "to", "hrefLeft", "hrefRight" ],
-      "aspects": [ "noHref", "invalidHref", "preferButton" ]
-    }],
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
         "**/*.test.js",
         "**/*.spec.js",
-        "**/*.test.jsx",
-        "**/*.spec.jsx",
         "webpack.config.js"
       ]
     }],
